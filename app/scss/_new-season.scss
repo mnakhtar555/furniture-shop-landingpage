@@ -1,0 +1,142 @@
+.new-season{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+    @include breakpoint-down(medium){
+        margin-top: 3rem;
+    }
+    &__bg{
+        position: absolute;
+        top: 10rem;
+        right: -8rem;
+        width: 60%;
+        transform: scaleX(-1);
+        z-index: -2;
+
+        @include breakpoint-down(medium){
+            top: 5rem;
+            right: -3rem;
+            width: 85%;
+        }
+    }
+    &__title-bg{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 40%;
+        height: 200px;
+        z-index: -1;
+
+        @include breakpoint-down(medium){
+            width: 90%;
+            height: 150px;
+        }
+    }
+    h2{
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 3rem;
+        font-family: 'Baskervville', sans-serif;
+        color: $baseColor;
+
+        @include breakpoint-down(medium){
+            padding-top: 3rem;
+            font-size: 2rem;
+        }
+    }
+    &__portfolio{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        &__decor{
+            position: relative;
+            width: 30%;
+            float: left;
+            margin-top: 28rem;
+            padding-right: .3rem;
+
+            @include breakpoint-down(medium){
+                margin-top: 6rem;
+            }
+            &__empty-bg{
+                width: 50%;
+                float: right;
+                height: 1.5rem;
+                background-color: $baseColor;
+                margin-bottom: .5rem;
+            }
+            &__image{
+                width: 100%;
+                height: auto;
+            }
+            &__caption{
+                background-color: #757575;
+                margin-top: -.3rem;
+                padding: .5rem 0;
+                color: #ffffff;
+                text-align: center;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+
+                @include breakpoint-down(medium){
+                    font-size: .8rem;
+                }
+            }
+            &__texture{
+                position: absolute;
+                bottom: 0;
+                left: -4rem;
+                width: 40%;
+                z-index: -1;
+
+                @include breakpoint-down(medium){
+                    left: -1rem;
+                }
+            }
+        }
+        &__bedroom{
+            width: 50%;
+            float: left;
+            padding-right: .3rem;
+            img{
+                width: 100%;
+                height: auto;
+            }
+            &__caption{
+                background-color: #757575;
+                margin-top: -.4rem;
+                padding: .5rem 0;
+                color: #ffffff;
+                text-align: center;
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+
+                @include breakpoint-down(medium){
+                    font-size: .8rem;
+                }
+            }
+            p{
+                padding: 0 10rem 0 2rem;
+                color: $baseColor;
+                font-size: 2rem;
+                font-family: 'Baskervville', sans-serif;
+
+                @include breakpoint-down(medium){
+                    font-size: .8rem;
+                    padding: 0;
+                }
+            }
+        }
+        &__side{
+            width: 20%;
+            float: left;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

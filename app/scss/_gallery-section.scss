@@ -1,0 +1,40 @@
+.gallery-section{
+    width: 60%;
+    margin: 0 auto;
+    @include breakpoint-down(medium){
+        width: 80%;
+    }
+
+    h2{
+        color: $baseColor;
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Baskervville';
+
+        @include breakpoint-down(medium){
+            font-size: 1.2rem;
+        }
+    }
+    &__gallery{
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr);
+        
+        div{
+            width: 90%;
+            height: auto;
+            margin-bottom: 1rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    p{
+        padding: 0 3rem;
+        font-size: .8rem;
+        text-align: center;
+
+        @include breakpoint-down(medium){
+            padding: 0 .7rem;
+        }
+    }
+}

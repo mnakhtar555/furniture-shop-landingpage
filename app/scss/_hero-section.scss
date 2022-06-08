@@ -1,0 +1,51 @@
+.hero-section{
+    position: relative;
+    margin-top: 3rem;
+    text-align: center;
+    &__bg{
+        position: absolute;
+        right: -8rem;
+        bottom: -20rem;
+        width: 50%;
+        height: auto;
+        transform: scaleX( -1 );
+        z-index: -1;
+    }
+    h3{
+        color: $baseColor;
+        font-size: .8rem;
+        font-family: 'Baskervville', serif;
+        text-transform: uppercase;
+        span:not(last-child){
+            margin-right: 1.5rem;
+        }
+    }
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+    &__subscription-form{
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        width: 20%;
+
+        @include breakpoint-down(medium){
+            width: 40%;
+        }
+        input, button{
+            width: 100%;
+            padding: .2rem 1rem;
+            font-size: 1rem;
+            font-family: 'Baskervville', sans-serif;
+        }
+        button{
+            margin-top: .5rem;
+            background-color: $baseColor;
+            border: none;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    }
+}

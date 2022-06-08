@@ -1,0 +1,152 @@
+.tips{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10rem;
+    clear: both;
+
+    @include breakpoint-down( medium ){
+        padding-top: 3rem;
+    }
+    &__wraper{
+        width: 80%;
+        margin: 0 auto;
+        &__text{
+            width: 30%;
+            float: left;
+            padding-top: 2rem;
+            padding-right: 1rem;
+            text-align: right;
+
+            @include breakpoint-down(medium){
+                width: 100%;
+                float: none;
+                padding-top: 1rem;
+                text-align: left;
+            }
+            h2{
+                margin-bottom: 5rem;
+                color: $baseColor;
+                font-size: 2rem;
+                font-family: 'Baskervville', sans-serif;
+
+                @include breakpoint-down( medium){
+                    margin-bottom: 1rem;
+                }
+            }
+            h3{
+                color: #757575;
+                font-size: 1.6rem;
+                font-family: 'Baskervville', sans-serif;
+
+                @include breakpoint-down(medium){
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        &__image{
+            position: relative;
+            width: 70%;
+            float: left;
+
+            @include breakpoint-down(medium){
+                width: 100%;
+                float: none;
+            }
+            img:first-child{
+                width: 93%;
+                height: auto;
+                float: left;
+                border-radius: .5rem;
+
+                @include breakpoint-down(medium){
+                    width: 86%;
+                }
+            }
+            &__empty-bg{
+                background-color: $baseColor;
+                width: 2.5rem;
+                height: 9rem;
+                float: left;
+                margin-top: .5rem;
+
+                @include breakpoint-down(medium){
+                    width: 2rem;
+                    height: 3.5rem;
+                    margin-top: .2rem;
+                }
+            }
+            img:nth-child(2){
+                position: absolute;
+                right: -8rem;
+                bottom: -5rem;
+                width: 70%;
+                height: auto;
+                z-index: -1;
+
+                @include breakpoint-down(medium){
+                    right: -2rem;
+                    bottom: -11rem;
+                    width: 60%;
+                }
+            }
+            img:nth-child(3){
+                position: absolute;
+                left: 0;
+                bottom: -6rem;
+                width: 25%;
+                height: auto;
+
+                @include breakpoint-down(medium){
+                    bottom: -10rem;
+                }
+            }
+            img:last-child{
+                position: absolute;
+                right: 8rem;
+                bottom: -9rem;
+                width: 40%;
+                height: auto;
+                border-radius: .5rem;
+                z-index: 2;
+
+                @include breakpoint-down(medium){
+                    right: 4rem;
+                    bottom: -11rem;
+                }
+            }
+            &__circles{
+                float: left;
+                margin: 5% 0 auto -3%;
+
+                @include breakpoint-down(medium){
+                    margin: 1% 0 auto -3%;
+                }
+                &__brown-circle,
+                &__light-circle,
+                &__gray-circle{
+                    display: block;
+                    width: 28px;
+                    height: 28px;
+                    border: 2px solid #ffffff;
+                    border-radius: 50%;
+                    margin-bottom: .5rem;
+
+                    @include breakpoint-down(medium){
+                        width: 16px;
+                        height: 16px;
+                        margin-bottom: .1rem;
+                    }
+                }
+                &__brown-circle{
+                    background-color: $baseColor;
+                }
+                &__light-circle{
+                    background-color: #ccb69a;
+                }
+                &__gray-circle{
+                    background-color: #757575;
+                }
+            }
+        }
+    }
+}

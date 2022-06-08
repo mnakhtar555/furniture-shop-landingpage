@@ -1,0 +1,103 @@
+.contact{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 12rem;
+    clear: both;
+
+    @include breakpoint-down(medium){
+        padding-top: 3rem;
+    }
+    img:first-child{
+        width: 100%;
+        
+        @include breakpoint-down(medium){
+            height: 450px;
+        }
+    }
+    &__texture{
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 80%;
+        height: 300px;
+        opacity: .7;
+
+        @include breakpoint-down(medium){
+            top: 1rem;
+            width: 90%;
+            height: 160px;
+        }
+    }
+    &__leaf-texture{
+        width: 40%;
+        float: right;
+        margin-top: -6rem;
+
+        @include breakpoint-down(medium){
+            margin-top: -1rem;
+        }
+    }
+    &__text{
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        transform: translate( -50%, -50% );
+        text-align: center;
+        color: $baseColor;
+        font-size: 1.2rem;
+        font-family: 'Baskervville', sans-serif;
+
+        @include breakpoint-down(medium){
+            top: 25%;
+            left: 22%;
+            transform: translate( -18%, -75% );
+            font-size: .7rem;
+        }
+    }
+    &__form{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate( -50%, -50% );
+        width: 40%;
+        background-color: #ffffff;
+        padding: 2.5rem 1.5rem;
+        opacity: .7;
+
+        @include breakpoint-down(medium){
+            top: 65%;
+            width: 90%;
+            padding: 1.5rem;
+        }
+        input{
+            background-color: #ffffff;
+            width: 100%;
+            margin-bottom: .5rem;
+            padding: .5rem;
+            border: 1px solid #757575;
+        }
+        input::placeholder{
+            text-transform: uppercase;
+        }
+        button{
+            width: 100%;
+            background-color: $baseColor;
+            padding: .3rem 0;
+            border: none;
+            font-family: 'Baskervville', sans-serif;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+        p{
+            color: #757575;
+            font-size: .9rem;
+
+            @include breakpoint-down(medium){
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}

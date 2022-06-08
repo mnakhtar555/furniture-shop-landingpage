@@ -1,0 +1,105 @@
+.offer{
+    position: relative;
+    width: 90%;
+    margin-top: 5rem;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    img:first-child{
+        width: 50%;
+        height: auto;
+        float: left;
+
+        @include breakpoint-down(medium){
+            width: 70%;
+        }
+    }
+    img:nth-child(2){
+        width: 40%;
+        height: auto;
+        float: left;
+        margin-top: 3rem;
+        margin-left: -5rem;
+        border-radius: .5rem;
+
+        @include breakpoint-down(medium){
+            width: 45%;
+            margin-left: -3rem;
+        }
+    }
+    img:nth-child(3){
+        width: 25%;
+        height: auto;
+        margin-left: .5rem;
+
+        @include breakpoint-down(medium){
+            margin-bottom: 5.4rem;
+        }
+    }
+    img:nth-child(4){
+        position: absolute;
+        top: -8rem;
+        right: -8rem;
+        width: 70%;
+        height: auto;
+        transform: scaleX(-1);
+        z-index: -1;
+
+        @include breakpoint-down(medium){
+            right: -3rem;
+        }
+    }
+    &__text-area{
+        width: 100%;
+        &__empty-bg{
+            float: left;
+            width: 4rem;
+            height: 14.3rem;
+            background-color: #ebbe84;
+            margin-left: .5rem;
+
+            @include breakpoint-down(medium){
+                width: 2rem;
+                height: 7rem;
+                margin-left: 0;
+            }
+        }
+        &__text{
+            float: left;
+            padding-top: 2rem;
+            padding-left: 3rem;
+            color: $baseColor;
+
+            @include breakpoint-down(medium){
+                padding-top: 1rem;
+                padding-left: 1rem;
+            }
+            span:first-child{
+                display: block;
+                float: left;
+                font-size: 8rem;
+                font-family: sans-serif;
+
+                @include breakpoint-down(medium){
+                    font-size: 4rem;
+                }
+            }
+            span:nth-child(2){
+                display: block;
+                font-size: 3rem;
+
+                @include breakpoint-down(medium){
+                    font-size: 1rem;
+                }
+            }
+            span:last-child{
+                display: block;
+                font-size: 2rem;
+
+                @include breakpoint-down(medium){
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

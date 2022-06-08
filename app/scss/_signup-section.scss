@@ -1,0 +1,93 @@
+.signup-section{
+    position: relative;
+    width: 100%;
+    padding-top: 5rem;
+    clear: both;
+    display: flex;
+    align-items: center;
+    &__bg-texture{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .5;
+        z-index: -1;
+    }
+    &__bg{
+        position: absolute;
+        top: 10;
+        left: -5rem;
+        width: 60%;
+        z-index: -2;
+    }
+    &__signup-text{
+        width: 68%;
+        padding-right: 5rem;
+        float: left;
+        text-align: right;
+
+        @include breakpoint-down(medium){
+            width: 100%;
+            float: none;
+            padding-right: .5rem;
+            text-align: center;
+        }
+        &__wrapper{
+            width: 60%;
+            float: right;
+
+            @include breakpoint-down(medium){
+                width: 100%;
+            }
+            h2{
+                margin-bottom: .5rem;
+                color: $baseColor;
+                font-family: 'Baskervville', sans-serif;
+                font-size: 1.7rem;
+            }
+            h3{
+                margin-top: 0;
+                color: #757575;
+                font-size: 1.7rem;
+                font-family: 'Baskervville', sans-serif;
+            }
+            &__signup-form{
+
+                @include breakpoint-down(medium){
+                    padding: 0 1rem;
+                }
+                input, button{
+                    width: 100%;
+                    padding: .3rem 0;
+                    font-size: 1.2rem;
+                    letter-spacing: .1rem;
+                    font-family: 'Baskervville', sans-serif;
+                    text-transform: uppercase;
+                }
+                button{
+                    background-color: $baseColor;
+                    border: none;
+                    margin-top: .5rem;
+                    color: #ffffff;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &__signup-image{
+        width: 32%;
+        float: left;
+
+        @include breakpoint-down(medium){
+            position: absolute;
+            width: 100%;
+            float: none;
+            z-index: -2;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
